@@ -11,6 +11,7 @@ feedback distillation research to reward hacking taxonomy in coding agent evals.
 """
 
 import json
+from sentence_transformers import SentenceTransformer
 import numpy as np
 import matplotlib
 matplotlib.use("Agg")
@@ -496,7 +497,7 @@ def print_report(results):
 
 def main():
     print("\n[init] Initializing embedder (TF-IDF; swap in SentenceTransformer for neural embeddings)...")
-    model = _TfidfEmbedder()
+    model = SentenceTransformer('all-MiniLM-L6-v2')
     print("[init] Embedder ready.")
 
     results = []
