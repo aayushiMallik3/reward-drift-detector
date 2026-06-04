@@ -496,7 +496,7 @@ def print_report(results):
 # ---------------------------------------------------------------------------
 
 def main():
-    print("\n[init] Initializing embedder (TF-IDF; swap in SentenceTransformer for neural embeddings)...")
+    print("\n[init] Initializing embedder (SentenceTransformer: all-MiniLM-L6-v2)...")
     model = SentenceTransformer('all-MiniLM-L6-v2')
     print("[init] Embedder ready.")
 
