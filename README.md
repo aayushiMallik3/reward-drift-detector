@@ -19,7 +19,7 @@ long-horizon tasks like `rust-c-compiler`:
 - **The Rationalizer** — starts legitimately, quietly introduces a fallback cheat mid-task
 - **The Adversary** — systematically reverse-engineers the verifier before exploiting it
 
-Their current detection relies on held-out test gaps and manual trajectory auditing — 
+Their current detection relies on held-out test gaps and manual trajectory auditing, 
 both applied *after* the run completes. This prototype explores whether the same 
 archetypes produce structurally distinct signal patterns detectable during or 
 immediately after a run, without requiring manual inspection.
