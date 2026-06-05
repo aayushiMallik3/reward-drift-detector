@@ -4,8 +4,8 @@ A signal-based prototype for detecting reward hacking in long-horizon coding age
 
 Built as a research exploration of Abundant's open problem: current reward hacking 
 detection is reactive (held-out test gaps, post-hoc trajectory auditing). This prototype 
-asks whether cheat behavior is detectable *earlier* — in the structural patterns of the 
-reward signal itself — before manual review is needed.
+asks whether cheat behavior is detectable *earlier*, in the structural patterns of the 
+reward signal itself, before manual review is needed.
 
 ---
 
@@ -64,7 +64,7 @@ Five synthetic trajectories modeled after Abundant's documented agent behaviors 
 `legitimate_oneshot` scores SUSPICIOUS because trajectory shape alone cannot 
 distinguish a fast legitimate developer from a passive exploit. A one-shot writer 
 and an opportunist cheat produce structurally similar curves: flat early, cliff late. 
-This is the honest detection boundary — which is exactly why Abundant's manual 
+This is the honest detection boundary, which is exactly why Abundant's manual 
 auditing exists as a second layer. A drift detector should flag ambiguous cases for 
 review, not make false confident calls.
 
@@ -85,7 +85,7 @@ LIKELY_LEGITIMATE / SUSPICIOUS / LIKELY_CHEAT
 
 Embeddings use TF-IDF vectors over action descriptions and code delta summaries.
 For a production version, swap in `sentence-transformers` (`all-MiniLM-L6-v2`) 
-for semantic rather than lexical similarity — a one-line change noted in the code.
+for semantic rather than lexical similarity, a one-line change noted in the code.
 
 ---
 
@@ -118,7 +118,7 @@ Synthetic trajectories are structured to match Harbor's task output schema and
 modeled after documented agent behaviors on Abundant's public 
 [long-horizon](https://github.com/abundant-ai/long-horizon) tasks, specifically 
 `rust-c-compiler`. The detector accepts either synthetic trajectories or real 
-Harbor log files — swap the input source in `main()`.
+Harbor log files swap the input source in `main()`.
 
 ---
 
